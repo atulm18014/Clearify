@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-blue-700 text-white font-bold 
+           py-2 px-4 rounded flex items-center transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-green-700 text-white font-bold 
+           py-2 px-4 rounded flex items-center transition-colors;
+  }
+  
+  .drop-zone {
+    @apply border-2 border-dashed border-gray-300 rounded-lg p-8
+           hover:border-primary hover:bg-blue-50 transition-colors
+           cursor-pointer;
+  }
+
+  .image-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8;
+  }
+
+  .image-preview {
+    @apply border rounded-lg overflow-hidden bg-gray-50
+           min-h-[200px] sm:min-h-[300px] lg:min-h-[400px]
+           flex items-center justify-center;
+  }
+
+  .image-preview img {
+    @apply w-full h-full object-contain max-h-[60vh];
+  }
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  @apply bg-gray-50 text-gray-800 m-0 min-h-screen;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#root {
+  @apply min-h-screen flex flex-col;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
